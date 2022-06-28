@@ -84,7 +84,7 @@ Conexao::desconectar();
                             <i class="material-icons right">delete</i>Remover</a>
 
                         <a class="waves-effect waves-light btn blue" onclick="JavaScript:location.href='lstProduto.php'">
-                            <i class="material-icons right">list</i>Listar</a>
+                            <i class="material-icons right">list</i>Voltar</a>
                     </div>
                 </div>
             </div>

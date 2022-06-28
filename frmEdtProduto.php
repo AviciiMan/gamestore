@@ -1,8 +1,7 @@
 <?php
 
-$id = $_GET['id'];  // recuperar produto da página editar imóveis
+$id = $_GET['id'];
 
-// comando de banco produto
 include 'conexao.php';
 $pdo = Conexao::conectar();
 $sql = "select * from produto where id=?;";

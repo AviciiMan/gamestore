@@ -38,12 +38,7 @@ Conexao::desconectar();
                 <th>Estoque</th>
                 <th>Descrição</th>
                 <th>Preço</th>
-                <th class="center">Funções</th>
-                <th>
-                    <a class="btn-floating btn-small waves-effect waves-light green" onclick="JavaScript:location.href='frmInsproduto.php'">
-                        <i class="material-icons">add</i>
-                    </a>
-                </th>
+                <th class="center">Comprar</th>
             </tr>
             <?php
             foreach ($lstProduto as $produto) {
@@ -55,16 +50,8 @@ Conexao::desconectar();
                     <td><?php echo $produto['descricao'] ?> </td>
                     <td><?php echo $produto['preco'] ?> </td>
                     <td class="center">
-                        <a class="btn-floating btn-small waves-effect waves-light orange" onclick="JavaScript:location.href='frmEdtproduto.php?id=' + 
-                           <?php echo $produto['id']; ?>">
-                            <i class="material-icons">edit</i>
-                        </a>
-                        <a class="btn-floating btn-small waves-effect waves-light red" onclick="JavaScript:remover(<?php echo $produto['id']; ?>)">
-                            <i class="material-icons">delete</i>
-                        </a>
-                        <a class="btn-floating btn-small waves-effect waves-light  light-blue darken-3" onclick="JavaScript:location.href='frmDetProduto.php?id=' + 
-                           <?php echo $produto['id']; ?>">
-                            <i class="material-icons">info</i>
+                        <a class="btn-floating btn-small waves-effect waves-light green" onclick="JavaScript:remover(<?php echo $produto['id']; ?>)">
+                            <i class="material-icons">shop</i>
                         </a>
                     </td>
                     <td></td>
@@ -82,7 +69,7 @@ Conexao::desconectar();
 
 <script>
     function remover(id) {
-        if (confirm('Excluir o Produto ' + id + '?')) {
+        if (confirm('Comprar o Produto ' + id + '?')) {
             location.href = 'remProduto.php?id=' + id;
         }
     }

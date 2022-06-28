@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
     $result->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "INSERT INTO vendedor(nome, email, senha, idade, telefone, sexo, uf, cidade, endereco) VALUES (?,?,?,?,?,?,?,?,?)";
     $query = $result->prepare($sql);
-    $query->execute(array($nome, $email, $senha, $idade, $telefone, $sexo, $uf, $cidade, $endereco));
+    $query->execute(array($nome, $email, $senha, $idade, $telefone, $sexo, $cidade, $uf, $endereco));
     Conexao::desconectar();
 
     header('Location: login.php');
@@ -148,13 +148,13 @@ if (isset($_POST['submit'])) {
                 </div>
                 <br>
                 <div class="inputBox">
-                    <input type="password" name="senha" id="senha" class="inputUser" required>
-                    <label for="senha" class="labelInput">Senha</label>
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput">Email</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="text" name="email" id="email" class="inputUser" required>
-                    <label for="email" class="labelInput">Email</label>
+                    <input type="password" name="senha" id="senha" class="inputUser" required>
+                    <label for="senha" class="labelInput">Senha</label>
                 </div>
                 <br><br>
                 <div class="inputBox">

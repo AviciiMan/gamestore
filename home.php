@@ -43,6 +43,7 @@
     <h2></h2>
     <div class="box">
         <a href="login.php">Login</a>
+        <a href="loginVend.php">Login Vendedor</a>
         <a href="frmCliente.php">Cadastre-se</a>
         <a href="frmVendedor.php">Cadastre-se Como Vendedor</a>
     </div>

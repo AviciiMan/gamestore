@@ -10,7 +10,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
     // print_r('<br>');
     // print_r('Senha: ' . $senha);
 
-    $sql = "select * from cliente where email LIKE ?";
+    $sql = "select * from vendedor where email LIKE ?";
 
     $pdo = Conexao::conectar();
     $query = $pdo->prepare($sql);
@@ -32,7 +32,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
         $_SESSION['email'] = $dados['email'];
         $_SESSION['senha'] = $dados['senha'];
         $_SESSION['id'] = $dados['id'];
-        header('Location: index2.php');
+        header('Location: index.php');
     } else {
         echo "Senha ou Email Inválidos";
     }
@@ -42,5 +42,5 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
 
 } else {
     // Não acessa
-    header('Location: login.php');
+    header('Location: loginVend.php');
 }
